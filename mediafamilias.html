@@ -1,0 +1,21 @@
+<html>
+<script>
+
+var totalfamiliares = parseInt(prompt("Digite a quantidade de familiares"));
+
+contador = 1;
+var totalidades = 0; //Não pode estar dentro do while pois se não ela será zerada sempre que o laço de repetição for executado.
+while(contador <= totalfamiliares){
+
+     idades = parseInt(prompt("Digite a Idade do Famíliar"));
+    var totalidades= totalidades + idades;
+    contador++;
+}
+
+var media = totalidades/totalfamiliares;
+
+document.write(media) ;
+//podemos usar o parseFloat caso formos trabalhar com números decimais
+</script>
+
+</html>

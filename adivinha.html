@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Jogo de Adivinha</title>
+</head>
+<script>
+
+function pulaLinha(){
+    document.write("<br>");
+}
+
+function mostra(frase){
+    
+    document.write(frase);
+    pulaLinha();
+}
+
+var numeropensado = Math.round(Math.random() * 10); //gera um numero aleatório entre 0 e 10 
+console.log(numeropensado);
+
+
+
+var tentativas = 1;
+while(tentativas <= 3){
+
+    var numerodigitado = parseInt(prompt("Digite aqui seu número"));
+if(numerodigitado == numeropensado){
+    alert("Você acertou o número")
+    break; //para de executar a repetição.
+}else{
+    alert("Você errou, o número certo é " + numeropensado)
+}
+tentativas++;
+}
+</script>
+
+</html>

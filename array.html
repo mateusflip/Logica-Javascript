@@ -1,0 +1,36 @@
+<html>
+<meta charset="UTF-8">
+<title>Array</title>
+<input></input>
+
+<button>Compare com o Meu segredo</button>
+
+<script>
+//var segredos = Math.round(Math.random() * 10); //gera um número aleatório
+var segredos = [5,10,15]; // declarando um array
+var entrada = document.querySelector("input"); //
+
+
+function verifica(){
+  var achou = false;
+  for (var posicao = 0; posicao < segredos.length; posicao++) { //length conta a quantidade de elementos dentro de um array.
+    if(entrada.value == segredos[posicao]){
+      alert("Você acertou");
+      achou = true;
+      break;
+    }
+  }
+  if(achou == false){
+    alert("Você errou");
+  }
+
+  entrada.value = "";
+  entrada.focus();
+}
+
+var botao = document.querySelector("button");
+botao.onclick = verifica; //Aqui vai sem parenteses pois se não ele executa a função
+
+</script>
+
+</html>

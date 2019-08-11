@@ -1,0 +1,28 @@
+<html>
+<meta charset="UTF-8">
+
+<input></input>
+
+<button>Compare com o Meu segredo</button>
+
+<script>
+var segredo = Math.round(Math.random() * 10); //gera um número aleatório 
+var entrada = document.querySelector("input"); //
+console.log(segredo);
+
+function verifica(){
+  if(entrada.value == segredo){
+    alert("Você acertou");
+  }else{
+    alert("Você Errou");
+  }
+  entrada.value = "";
+  entrada.focus();
+}
+
+var botao = document.querySelector("button");
+botao.onclick = verifica; //Aqui vai sem parenteses pois se não ele executa a função
+
+</script>
+
+</html>
